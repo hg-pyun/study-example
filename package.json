@@ -1,0 +1,29 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Webpack2 Example - calculation.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.3.3",
+    "webpack": "^2.3.3"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haegul/boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haegul/boilerplate/issues"
+  },
+  "homepage": "https://github.com/haegul/boilerplate#readme"
+}
