@@ -1,5 +1,5 @@
 # boilerplate
-Webpack 2 + ES2015 개발 환경 설정을 위한 start kit입니다.
+Webpack2 Example - calculation.
 
 ## Install
 Write down this in the commend line.
