@@ -10,5 +10,5 @@ $ npm install webpack --save-dev
 
 If you use ECMA2015 Spec, install Babel.
 ```
-$ npm install babel-loader babel-core babel-preset-env webpack --save-dev
+$ npm install babel-loader babel-core babel-preset-env --save-dev
 ```
