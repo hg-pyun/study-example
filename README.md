@@ -1,2 +1,4 @@
 # boilerplate
-my boilerplate for porject
+this repository introduces project start kit.
+
+
