@@ -1,2 +1,1 @@
-# Study Examples for Tistory
-http://dev-momo.tistory.com
+# Image Filter using javascript.
