@@ -1,4 +1,2 @@
-# boilerplate
-this repository introduces project start kit.
-
-
+# Study Examples for Tistory
+http://dev-momo.tistory.com
