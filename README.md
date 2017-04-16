@@ -1,2 +1,2 @@
-# Study Examples for Tistory
+# es6 proxy
 http://dev-momo.tistory.com
