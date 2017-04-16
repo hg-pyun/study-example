@@ -18,8 +18,9 @@ var p = new Proxy(target, handler);
 ```
 target 에는 Proxy로 랩핑할 대상 객체를 지정해 줄 수 있다. 기본 배열, 함수, 또다른 Proxy객체 등이 들어올 수 있다.
 handler에는 operation이 수행 될 때, Proxy의 동작을 정의하는 함수 객체를 넣어준다. 여기서 말하는 operation이란 앞에서 언급했던 속성 조회, 할당, 열거, 함수 호출 등이 있겠다. handler에는 get, set, has, defineProperty, deleteProperty, construct, apply 등 총 13가지 함수를 핸들링 할 수 있다. 먼저 가장 간단한 get 부터 사용해보도록 하자.
+
+#### handler.get.js
 ```
-handler.get.js
 var p = new Proxy({}, {
     get: function(target, prop, receiver) {
         console.log('called: ' + prop);
@@ -31,8 +32,9 @@ console.log(p.a); // "called: a"
                   // 10
 ```
 위 코드를 nodejs나 chrome으로 실행시켜 보면 "called: a"가 출력된 후 "10"이 출력되는 것을 볼 수 있다. handler의 get method는 바로 '.' 연산을 hook하는 역할을 한다. 앞에서 언급한 속성 조회('.' 연산자 사용)시 사용자의 커스텀 동작(return 10;)을 실행한 것이다. 막상 써보니 무진장 신기하다. 이번엔 set을 한번 사용해보도록 하자.
+
+#### handler.set.js
 ```
-handler.set.js
 var p = new Proxy({}, {
     set: function(target, prop, value, receiver) {
         console.log('called: ' + prop + ' = ' + value);
@@ -45,8 +47,9 @@ p.a = 10; // "called: a = 10"
 set method는 '=' 연산자가 실행될 때 hook이 실행된다. 말그대로 뭔가 값을 할당(set)할 때 커스텀 동작을 실행시킨다.
 
 하나만 더 해보도록 하자. construct method는 뭘 hook하는 것일까. construct 즉 생성자인것을 보니 new 연산자를 사용했을 때라 짐작 할 수 있다.
+
+#### handler.construct.js
 ```
-handler.construct.js
 var p = new Proxy(function() {}, {
     construct: function(target, argumentsList, newTarget) {
         console.log('called: ' + argumentsList.join(', '));
@@ -58,7 +61,6 @@ console.log(new p(1, 2, 3).value); // "called: 1, 2, 3"
                                    // 10
 ```
 예상대로 new 연산자가 실행 될 때 hook하는 것을 볼 수 있다. 두번째 인자로 new 연산자의 arguments들이 넘어오고 json 형태로 리턴값으로 전달도 할 수 있다.이밖에도 apply를 사용하면 함수 호출을, defineProperty를 사용하면 객체를 할당할 때, deleteProperty를 사용하면 객체를 delete할 때 hook을 할 수 있다.
-
 
 ## 어디다 쓰면 될까?
  Proxy에 대해 알아보긴 했는데, 도대체 어디다 사용하면 되는지 감이 잘 잡히지 않는다. 실제 사용되는 사례를 찾아본 바로는 객체 로깅(Object Logging)이나 읽기 전용 객체(Read Only Object) 등이 있다. 객체 로깅은 말그대로 핸들러 내부에 로그를 삽입해서 객체를 관찰하는 것을 말한다. 테스트 프레임워크 등에서 이를 응용해서 사용하면 좀 더 정확한 테스팅이 가능할 것이다. 읽기 전용 객체는 타겟을 변경할 수 있는 handler method들을 모두 오버라이딩 하는것이다. 이렇게 하면 해당 객체에 변경을 가하는 행위('='이라던가 define이라던가)를 해도 handler에서 모두 가로채여 막아지므로 읽기만 가능한 객체를 만들 수 있다. 관심이 있는 사람은 ES6 In Depth 포스팅을 참고하도록 하자.
