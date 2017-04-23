@@ -1,0 +1,23 @@
+{
+  "name": "study_example",
+  "version": "1.0.0",
+  "description": "http://dev-momo.tistory.com",
+  "main": "error_basic.js",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haegul/study_example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haegul/study_example/issues"
+  },
+  "homepage": "https://github.com/haegul/study_example#readme"
+}
