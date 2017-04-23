@@ -3,6 +3,7 @@ let app = express();
 
 // router
 app.get('/', function (req, res, next) {
+    error;
     next('error occur!!');
 });
 
@@ -15,3 +16,4 @@ app.use(function (err, req, res, next) {
 app.listen(3000, function () {
     console.log('http://localhost:3000/');
 });
+
