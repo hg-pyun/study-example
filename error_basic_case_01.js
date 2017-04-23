@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+let app = express();
 
 // middle ware 01
 app.use(function (req, res, next) {

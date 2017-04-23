@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+let app = express();
 
 app.get('/', function (req, res, next) {
     next('error occur!!');
