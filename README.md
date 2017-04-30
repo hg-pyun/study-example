@@ -1,16 +1,15 @@
 # Study Examples for Tistory
-http://dev-momo.tistory.com
+http://dev-momo.tistory.com/entry/React-Server-Side-Rendering
 
 ```
 Root
-|-server
-|   |- index.js
 |-client
 |   |- app.js
 |   |- index.js
-|- webpack.config.js
-|- package.json
+|-server
+|   |- Html.js
+|   |- index.js
 |- .babel.rc
+|- package.json
+|- webpack.config.js
 ```
-
-$ npm install express -save
