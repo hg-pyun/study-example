@@ -1,0 +1,32 @@
+{
+  "name": "study_example",
+  "version": "1.0.0",
+  "description": "http://dev-momo.tistory.com",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haegul/study_example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haegul/study_example/issues"
+  },
+  "homepage": "https://github.com/haegul/study_example#readme"
+}
