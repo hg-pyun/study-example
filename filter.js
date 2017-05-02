@@ -36,7 +36,7 @@ $('#filterButton').on('click', function () {
     var pixels = ctx.getImageData(0,0, canvas.width, canvas.height);
 
     // image processing
-    var filteredData = sobel(pixels);
+    var filteredData = blur(pixels, 70);
 
     // Canvas에 다시 그린다.
     ctx.putImageData(filteredData, 0 , 0);
@@ -47,6 +47,23 @@ function sobel (pixels) {
           [ -1,  0,  1,
             -2,  0,  2,
             -1,  0,  1], 1);
+}
+
+function sharpen(pixels){
+    return convolution(pixels,
+          [ -1, -1,  -1,
+            -1,  8,  -1,
+            -1, -1,  -1 ], 1);
+}
+
+function blur(pixels, value) {
+
+    var offset = 1/(value/10);
+
+    return convolution(pixels,
+           [offset,  offset,  offset,
+            offset,  offset,  offset,
+            offset,  offset,  offset ], 1);
 }
 
 // convolution
