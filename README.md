@@ -1,2 +1,2 @@
-# Study Examples for Tistory
+# Study Examples
 http://dev-momo.tistory.com
