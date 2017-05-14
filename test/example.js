@@ -15,7 +15,7 @@ describe('example', function() {
     });
 
     it('sum func invalid', function () {
-        assert.equal('invalid' , sum(1, "1"));  // string이 들어올 경우
-        assert.equal('invalid'  , sum(1, true));  // 허용되지 않은 값이 들어올 경우
+        assert.equal('invalid', sum(1, "1"));  // string이 들어올 경우
+        assert.equal('invalid', sum(1, true));  // 허용되지 않은 값이 들어올 경우
     })
 });
