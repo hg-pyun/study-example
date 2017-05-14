@@ -8,3 +8,4 @@ http://dev-momo.tistory.com
 - [nodejs-error-handle](https://github.com/haegul/study_example/tree/nodejs/handle_error)
 - [react-server-side-rendering](https://github.com/haegul/study_example/tree/react/server-side-rendering)
 - [webpack](https://github.com/haegul/study_example/tree/webpack/example_momo)
+- [ecma2015-proxy](https://github.com/haegul/study_example/tree/es6/proxy)
