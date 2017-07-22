@@ -10,3 +10,4 @@ http://dev-momo.tistory.com
 - [webpack](https://github.com/haegul/study_example/tree/webpack/example_momo)
 - [ecma2015-proxy](https://github.com/haegul/study_example/tree/es6/proxy)
 - [mocha](https://github.com/haegul/study_example/tree/test/mocha)
+- [functional programming in javascript](https://github.com/haegul/study_example/tree/functional/basic)
