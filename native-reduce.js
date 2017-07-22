@@ -17,3 +17,5 @@ console.log(loopTotal); // 17
 // functional
 let funcTotal = subjects.reduce(addLength, 0);
 console.log(funcTotal);  // 17
+
+
