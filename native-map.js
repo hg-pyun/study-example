@@ -6,12 +6,13 @@ function makeUpperCase(word) {
     return word.toUpperCase();
 }
 
-// // loop
-// let result = [];
-// for (let i = 0; i < subjects.length; i++) {
-//     result.push(makeUpperCase(subjects[i]));
-// }
-// console.log(result);  // [ 'MATH', 'ENGLISH', 'KOREAN' ]
+// loop
+let loopResult = [];
+for (let i = 0; i < subjects.length; i++) {
+    loopResult.push(makeUpperCase(subjects[i]));
+}
+console.log(loopResult);  // [ 'MATH', 'ENGLISH', 'KOREAN' ]
 
-let result = subjects.map(makeUpperCase);   // Array.prototype.map.call(subjects, makeUpperCase);
-console.log(result);  // [ 'MATH', 'ENGLISH', 'KOREAN' ]
+// functional
+let funcResult = subjects.map(makeUpperCase);   // Array.prototype.map.call(subjects, makeUpperCase);
+console.log(funcResult);  // [ 'MATH', 'ENGLISH', 'KOREAN' ]
