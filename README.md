@@ -11,3 +11,4 @@ http://dev-momo.tistory.com
 - [ecma2015-proxy](https://github.com/haegul/study_example/tree/es6/proxy)
 - [mocha](https://github.com/haegul/study_example/tree/test/mocha)
 - [functional programming in javascript](https://github.com/haegul/study_example/tree/functional/basic)
+- [currying in javascript](https://github.com/haegul/study_example/tree/functional/currying)
